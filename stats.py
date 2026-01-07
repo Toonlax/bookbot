@@ -11,3 +11,21 @@ def num_of_each_character(text):
         else:
             character_count_dict[lower_char] = 1
     return character_count_dict
+
+def sort_on(items):
+    return items["num"]
+
+def sorting(char_dict):
+    list_of_dicts = []
+
+    for key, value in char_dict.items():
+        iteration_dict = {
+            "char": key,
+            "num": value
+        }
+        if iteration_dict["char"].isalpha():
+            list_of_dicts.append(iteration_dict)
+
+    list_of_dicts.sort(reverse = True, key = sort_on)
+    return list_of_dicts
+
