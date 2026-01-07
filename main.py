@@ -11,12 +11,14 @@ def main():
     num_character_dict = num_of_each_character(result)
     sorted_char_num = sorting(num_character_dict)
 
+
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")
-    print(sorted_char_num)
+    for item in sorted_char_num:
+        print(f"{item["char"]}: {item["num"]}")
     print("============= END ===============")
 
 main()
